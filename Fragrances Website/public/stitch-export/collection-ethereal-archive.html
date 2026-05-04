@@ -1,0 +1,566 @@
+﻿<!doctype html>
+<html class="light" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>SCENTAIRE | Luxury Fragrance Atelier</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="theme.css" />
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "tertiary-fixed": "#dbe1ff",
+                            "surface-dim": "#f9f9f9",
+                            "on-error": "#690005",
+                            "secondary-fixed": "#f7e1a6",
+                            tertiary: "#27438a",
+                            "on-tertiary-fixed-variant": "#27438a",
+                            "on-secondary-container": "#735c00",
+                            "primary-container": "#d4af37",
+                            "surface-container-highest": "#e1e2e1",
+                            "surface-container-low": "#f4f4f4",
+                            "secondary-fixed-dim": "#dac58d",
+                            surface: "#f9f9f9",
+                            "on-secondary": "#ffffff",
+                            "on-secondary-fixed-variant": "#544519",
+                            "surface-bright": "#ffffff",
+                            "primary-fixed": "#ffe088",
+                            "surface-container-high": "#ebebeb",
+                            "surface-tint": "#d4af37",
+                            "surface-container-lowest": "#ffffff",
+                            error: "#ba1a1a",
+                            "on-tertiary-fixed": "#00174b",
+                            "tertiary-container": "#dbe1ff",
+                            "on-primary-fixed-variant": "#574500",
+                            "tertiary-fixed-dim": "#b4c5ff",
+                            secondary: "#735c00",
+                            "outline-variant": "#c9c6bc",
+                            "on-error-container": "#410002",
+                            "surface-variant": "#e1e2e1",
+                            primary: "#735c00",
+                            "on-surface-variant": "#4d4635",
+                            "inverse-primary": "#e9c349",
+                            outline: "#7d7767",
+                            "surface-container": "#f1f1f1",
+                            background: "#f9f9f9",
+                            "on-surface": "#1c1b1b",
+                            "on-background": "#1c1b1b",
+                            "secondary-container": "#f7e1a6",
+                            "on-secondary-fixed": "#241a00",
+                            "inverse-on-surface": "#f4f0ef",
+                            "on-primary": "#ffffff",
+                            "primary-fixed-dim": "#e9c349",
+                            "on-primary-fixed": "#241a00",
+                            "on-primary-container": "#241a00",
+                            "error-container": "#ffdad6",
+                            "inverse-surface": "#313030",
+                            "on-tertiary": "#ffffff",
+                            "on-tertiary-container": "#00174b",
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                        fontFamily: {
+                            headline: ["Noto Serif"],
+                            body: ["Inter"],
+                            label: ["Inter"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .material-symbols-outlined {
+                font-variation-settings:
+                    "FILL" 0,
+                    "wght" 300,
+                    "GRAD" 0,
+                    "opsz" 24;
+            }
+            body {
+                background-color: #f9f9f9;
+                color: #1c1b1b;
+                font-family: "Inter", sans-serif;
+            }
+            .serif-display {
+                font-family: "Noto Serif", serif;
+            }
+            .letter-spacing-widest {
+                letter-spacing: 0.3em;
+            }
+            .letter-spacing-editorial {
+                letter-spacing: 0.15em;
+            }
+            .light-overlay {
+                background: linear-gradient(
+                    to bottom,
+                    rgba(249, 249, 249, 0.4) 0%,
+                    rgba(249, 249, 249, 0.1) 100%
+                );
+            }
+
+            .hero-fade {
+                background: linear-gradient(
+                    90deg,
+                    rgba(249, 249, 249, 0) 58%,
+                    rgba(249, 249, 249, 0.95) 88%,
+                    #f9f9f9 100%
+                );
+            }
+        </style>
+    </head>
+    <body
+        class="bg-[#F9F9F9] text-on-surface selection:bg-secondary-container selection:text-on-secondary-container page-fade"
+    >
+        <nav
+            class="fixed top-0 w-full z-50 px-8 lg:px-14 py-4 flex items-center justify-between border-b border-[#e4e1da] bg-[#f3f3f1]/85 backdrop-blur-md"
+        >
+            <div class="serif tracking-[0.35em] text-lg">SCENTAIRE</div>
+            <div
+                class="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.22em]"
+            >
+                <a
+                    data-nav="home"
+                    class="text-[#7c6408] border-b border-[#7c6408] pb-1"
+                    href="collection-ethereal-archive.html"
+                    >Home</a
+                >
+                <a
+                    data-nav="collections"
+                    class="hover:text-[#7c6408]"
+                    href="essence-collection.html"
+                    >Collections</a
+                >
+                <a
+                    data-nav="about"
+                    class="hover:text-[#7c6408]"
+                    href="collection-ethereal-archive.html#about"
+                    >About</a
+                >
+                <a
+                    data-nav="notes"
+                    class="hover:text-[#7c6408]"
+                    href="notes.html"
+                    >Notes</a
+                >
+                <a
+                    data-nav="community"
+                    class="hover:text-[#7c6408]"
+                    href="screen.html"
+                    >Community</a
+                >
+            </div>
+            <div class="flex items-center gap-6">
+                <button
+                    class="text-[#2D3435] hover:text-[#735C00] transition-colors duration-300"
+                >
+                    <span
+                        class="material-symbols-outlined"
+                        data-icon="shopping_bag"
+                        >shopping_bag</span
+                    >
+                </button>
+            </div>
+        </nav>
+        <section
+            class="relative h-screen flex items-center bg-[#F3F3F1] overflow-hidden pt-16"
+        >
+            <div class="absolute inset-y-0 left-0 w-full md:w-1/2">
+                <img
+                    src="assets/landing page photo.jpg"
+                    alt="Fragrance"
+                    class="w-full h-full object-cover object-[42%_center]"
+                />
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-black/90 via-[#120f10]/56 to-transparent"
+                ></div>
+                <div
+                    class="absolute inset-0"
+                    style="
+                        background: linear-gradient(
+                            90deg,
+                            rgba(12, 10, 10, 0.06) 50%,
+                            rgba(243, 243, 241, 0.66) 76%,
+                            #f3f3f1 100%
+                        );
+                    "
+                ></div>
+            </div>
+
+            <div
+                class="relative z-10 mx-auto w-full max-w-[1420px] px-8 md:px-12"
+            >
+                <div
+                    class="ml-auto max-w-[620px] text-left md:mr-[2%] lg:mr-[6%]"
+                >
+                    <h1
+                        class="serif-display font-light text-[#1c1b1b] leading-[0.95] tracking-[-0.02em]"
+                        style="font-size: clamp(3.3rem, 6.2vw, 6.4rem)"
+                    >
+                        Find Your<br />
+                        <span class="text-[#8A6C0F] italic"
+                            >Signature Scent</span
+                        >
+                    </h1>
+
+                    <p
+                        class="mt-8 max-w-[590px] text-[#666155] text-[12px] md:text-[14px] uppercase tracking-[0.22em]"
+                    >
+                        Discover fragrances that define your presence
+                    </p>
+
+                    <a
+                        href="essence-collection.html"
+                        class="mt-10 inline-block min-w-[300px] bg-[#D4AF37] px-10 py-4 text-center text-sm tracking-widest uppercase text-white transition hover:bg-[#7c6408]"
+                    >
+                        Explore Collection
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section
+            class="relative -mt-px pt-16 pb-24 bg-gradient-to-b from-[#f3f3f1] via-[#fbfbfb] to-[#ffffff]"
+        >
+            <div class="container mx-auto px-12">
+                <div class="flex flex-wrap justify-center gap-16">
+                    <div class="group cursor-pointer">
+                        <span
+                            class="text-[11px] tracking-[0.4em] uppercase text-[#4D4635] group-hover:text-[#735C00] transition-colors duration-300"
+                            >Fresh</span
+                        >
+                        <div
+                            class="h-[0.5px] w-0 group-hover:w-full bg-[#735C00] transition-all duration-500 mt-1"
+                        ></div>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <span
+                            class="text-[11px] tracking-[0.4em] uppercase text-[#4D4635] group-hover:text-[#735C00] transition-colors duration-300"
+                            >Woody</span
+                        >
+                        <div
+                            class="h-[0.5px] w-0 group-hover:w-full bg-[#735C00] transition-all duration-500 mt-1"
+                        ></div>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <span
+                            class="text-[11px] tracking-[0.4em] uppercase text-[#4D4635] group-hover:text-[#735C00] transition-colors duration-300"
+                            >Sweet</span
+                        >
+                        <div
+                            class="h-[0.5px] w-0 group-hover:w-full bg-[#735C00] transition-all duration-500 mt-1"
+                        ></div>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <span
+                            class="text-[11px] tracking-[0.4em] uppercase text-[#4D4635] group-hover:text-[#735C00] transition-colors duration-300"
+                            >Oriental</span
+                        >
+                        <div
+                            class="h-[0.5px] w-0 group-hover:w-full bg-[#735C00] transition-all duration-500 mt-1"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 bg-[#F9F9F9]">
+            <div class="container mx-auto px-12">
+                <div class="text-center mb-24">
+                    <h2
+                        class="serif-display text-4xl md:text-5xl font-light mb-4 text-[#1c1b1b]"
+                    >
+                        The Curated Collection
+                    </h2>
+                    <div class="h-[1px] w-24 bg-[#D4AF37] mx-auto"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="flex flex-col space-y-6">
+                        <div
+                            class="aspect-[3/4] overflow-hidden bg-white relative group"
+                        >
+                            <img
+                                alt="Nocturnal Essence"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                src="assets/img-03.jpg"
+                            />
+                            <div
+                                class="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+                            >
+                                <a
+                                    href="silk-ash.html"
+                                    class="text-[10px] tracking-widest uppercase bg-white/80 backdrop-blur-md px-6 py-3 border border-[#D4AF37]/20 text-[#1c1b1b]"
+                                    >View Details</a
+                                >
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <p
+                                class="text-[10px] tracking-[0.3em] uppercase text-[#735C00] mb-2"
+                            >
+                                Woody / Intense
+                            </p>
+                            <h3
+                                class="serif-display text-2xl font-light text-[#1c1b1b]"
+                            >
+                                Nocturnal Essence
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="flex flex-col space-y-6 mt-16 md:mt-0">
+                        <div
+                            class="aspect-[3/4] overflow-hidden bg-white relative group"
+                        >
+                            <img
+                                alt="Gilded Amber"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                src="assets/img-05.jpg"
+                            />
+                            <div
+                                class="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+                            >
+                                <a
+                                    href="silk-ash.html"
+                                    class="text-[10px] tracking-widest uppercase bg-white/80 backdrop-blur-md px-6 py-3 border border-[#D4AF37]/20 text-[#1c1b1b]"
+                                    >View Details</a
+                                >
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <p
+                                class="text-[10px] tracking-[0.3em] uppercase text-[#735C00] mb-2"
+                            >
+                                Oriental / Warm
+                            </p>
+                            <h3
+                                class="serif-display text-2xl font-light text-[#1c1b1b]"
+                            >
+                                Gilded Amber
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="flex flex-col space-y-6">
+                        <div
+                            class="aspect-[3/4] overflow-hidden bg-white relative group"
+                        >
+                            <img
+                                alt="Verdant Mist"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                src="assets/img-02.jpg"
+                            />
+                            <div
+                                class="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+                            >
+                                <a
+                                    href="silk-ash.html"
+                                    class="text-[10px] tracking-widest uppercase bg-white/80 backdrop-blur-md px-6 py-3 border border-[#D4AF37]/20 text-[#1c1b1b]"
+                                    >View Details</a
+                                >
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <p
+                                class="text-[10px] tracking-[0.3em] uppercase text-[#735C00] mb-2"
+                            >
+                                Fresh / Floral
+                            </p>
+                            <h3
+                                class="serif-display text-2xl font-light text-[#1c1b1b]"
+                            >
+                                Verdant Mist
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="py-32 bg-[#ffffff]">
+            <div class="container mx-auto px-12">
+                <div class="flex flex-col md:flex-row items-center gap-20">
+                    <div class="w-full md:w-1/2 space-y-10">
+                        <div class="space-y-4">
+                            <span
+                                class="text-[10px] tracking-[0.5em] uppercase text-[#735C00]"
+                                >Philosophy</span
+                            >
+                            <h2
+                                class="serif-display text-4xl md:text-6xl font-light leading-tight text-[#1c1b1b]"
+                            >
+                                Beyond Scent, <br />
+                                <span class="italic">An Identity.</span>
+                            </h2>
+                        </div>
+                        <p
+                            class="text-[#4D4635] leading-relaxed text-lg font-light max-w-xl"
+                        >
+                            At SCENTAIRE, we believe a fragrance is the ultimate
+                            invisible accessory. It is a silent language that
+                            speaks of your journey, your desires, and your quiet
+                            strength. Our compositions are curated with rare
+                            botanicals and minerals, aged in shadows to reveal
+                            their complex souls.
+                        </p>
+                        <div class="pt-6">
+                            <a
+                                class="inline-flex items-center gap-4 group"
+                                href="#"
+                                ><span
+                                    class="text-[11px] tracking-[0.3em] uppercase font-medium text-[#1c1b1b]"
+                                    >Read Our Story</span
+                                >
+                                <div
+                                    class="w-12 h-[1px] bg-[#D4AF37] group-hover:w-20 transition-all duration-500"
+                                ></div
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="relative">
+                            <div
+                                class="absolute -top-10 -left-10 w-full h-full bg-[#F4F4F4] -z-10"
+                            ></div>
+                            <img
+                                alt="Fragrance Philosophy"
+                                class="w-full object-cover hover:brightness-105 transition-all duration-1000"
+                                src="assets/img-04.jpg"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section
+            class="h-[614px] relative flex items-center justify-center overflow-hidden"
+        >
+            <img
+                alt="Mood background"
+                class="absolute inset-0 w-full h-full object-cover opacity-10"
+                src="assets/img-01.jpg"
+            />
+            <div class="relative z-10 text-center px-12">
+                <blockquote
+                    class="serif-display text-3xl md:text-5xl font-light italic text-[#1c1b1b] mb-8"
+                >
+                    "Fragrance is the intense form of memory."
+                </blockquote>
+                <p class="text-[#735C00] tracking-[0.5em] uppercase text-xs">
+                    - Jean-Paul Guerlain
+                </p>
+            </div>
+        </section>
+        <footer class="w-full py-20 px-12 bg-[#EBEEEF] text-[#2D3435]">
+            <div
+                class="container mx-auto flex flex-col md:flex-row justify-between items-start gap-12"
+            >
+                <div class="space-y-6">
+                    <div
+                        class="text-lg font-light tracking-widest text-[#2D3435] serif-display"
+                    >
+                        SCENTAIRE
+                    </div>
+                    <p
+                        class="text-[#2D3435]/60 font-['Inter'] text-[11px] tracking-widest uppercase"
+                    >
+                        &copy; 2024 SCENTAIRE. All rights reserved.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-8 md:gap-12">
+                    <div class="flex flex-col gap-4">
+                        <a
+                            class="text-[#2D3435]/60 hover:text-[#735C00] transition-opacity duration-300 font-['Inter'] text-[11px] tracking-widest uppercase"
+                            href="#"
+                            >Sustainability</a
+                        ><a
+                            class="text-[#2D3435]/60 hover:text-[#735C00] transition-opacity duration-300 font-['Inter'] text-[11px] tracking-widest uppercase"
+                            href="#"
+                            >Shipping</a
+                        ><a
+                            class="text-[#2D3435]/60 hover:text-[#735C00] transition-opacity duration-300 font-['Inter'] text-[11px] tracking-widest uppercase"
+                            href="#"
+                            >Returns</a
+                        >
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <a
+                            class="text-[#2D3435]/60 hover:text-[#735C00] transition-opacity duration-300 font-['Inter'] text-[11px] tracking-widest uppercase"
+                            href="#"
+                            >Contact</a
+                        ><a
+                            class="text-[#2D3435]/60 hover:text-[#735C00] transition-opacity duration-300 font-['Inter'] text-[11px] tracking-widest uppercase"
+                            href="#"
+                            >Privacy</a
+                        >
+                    </div>
+                </div>
+                <div class="flex gap-6 items-center">
+                    <span
+                        class="material-symbols-outlined text-[#2D3435]/40 hover:text-[#735C00] transition-colors cursor-pointer"
+                        data-icon="share"
+                        >share</span
+                    ><span
+                        class="material-symbols-outlined text-[#2D3435]/40 hover:text-[#735C00] transition-colors cursor-pointer"
+                        data-icon="mail"
+                        >mail</span
+                    >
+                </div>
+            </div>
+        </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const path = window.location.pathname.toLowerCase();
+                const activeClass =
+                    "text-[#7c6408] border-b border-[#7c6408] pb-1";
+                const inactiveClass = "hover:text-[#7c6408]";
+
+                const getActiveKey = function () {
+                    if (path.endsWith("collection-ethereal-archive.html")) {
+                        return window.location.hash === "#about"
+                            ? "about"
+                            : "home";
+                    }
+
+                    return "collections";
+                };
+
+                const updateActiveNav = function () {
+                    const activeKey = getActiveKey();
+                    document
+                        .querySelectorAll("[data-nav]")
+                        .forEach(function (item) {
+                            item.className =
+                                item.getAttribute("data-nav") === activeKey
+                                    ? activeClass
+                                    : inactiveClass;
+                        });
+                };
+
+                updateActiveNav();
+                window.addEventListener("hashchange", updateActiveNav);
+
+                document.body.classList.add("page-ready");
+            });
+
+            document
+                .querySelectorAll('a[href$=".html"]')
+                .forEach(function (link) {
+                    link.addEventListener("click", function (e) {
+                        const href = link.getAttribute("href");
+                        if (!href) return;
+                        e.preventDefault();
+                        document.body.classList.remove("page-ready");
+                        setTimeout(function () {
+                            window.location.href = href;
+                        }, 180);
+                    });
+                });
+        </script>
+    </body>
+</html>

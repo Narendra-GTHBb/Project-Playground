@@ -1,0 +1,467 @@
+﻿<!doctype html>
+<html lang="en" class="light">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>THE ETHEREAL ARCHIVE | Fragrance Detail</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="theme.css" />
+        <style>
+            :root {
+                --bg: #f3f3f1;
+                --surface: #ffffff;
+                --surface-soft: #ece9e4;
+                --line: #d8d2c5;
+                --text: #1c1b1b;
+                --muted: #6d6658;
+                --gold: #7c6408;
+            }
+
+            html,
+            body {
+                background: var(--bg);
+                color: var(--text);
+                font-family: "Inter", sans-serif;
+            }
+
+            .serif {
+                font-family: "Playfair Display", serif;
+            }
+
+            .section-divider {
+                height: 1px;
+                width: 100%;
+                background: linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--gold),
+                    transparent
+                );
+            }
+
+            .hero-aura {
+                background:
+                    radial-gradient(
+                        circle at 48% 40%,
+                        rgba(212, 175, 55, 0.25),
+                        rgba(243, 243, 241, 0) 56%
+                    ),
+                    radial-gradient(
+                        circle at 45% 75%,
+                        rgba(255, 255, 255, 0.6),
+                        rgba(243, 243, 241, 0) 45%
+                    );
+            }
+
+            .lux-card {
+                background: linear-gradient(
+                    160deg,
+                    rgba(255, 255, 255, 0.9),
+                    rgba(236, 233, 228, 0.7)
+                );
+                border: 1px solid var(--line);
+            }
+
+            .image-wrap {
+                overflow: hidden;
+                border: 1px solid var(--line);
+                background: #ece9e4;
+            }
+
+            .image-zoom {
+                transition:
+                    transform 900ms ease,
+                    filter 700ms ease;
+            }
+
+            .image-wrap:hover .image-zoom {
+                transform: scale(1.045);
+                filter: saturate(1.05);
+            }
+
+            .reveal {
+                opacity: 0;
+                transform: translateY(24px);
+                transition:
+                    opacity 700ms ease,
+                    transform 700ms ease;
+            }
+
+            .reveal.is-visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+    </head>
+    <body class="page-fade selection:bg-[#d4af37] selection:text-[#0f0f0f]">
+        <nav
+            class="fixed top-0 w-full z-50 px-8 lg:px-14 py-4 flex items-center justify-between border-b border-[#e4e1da] bg-[#f3f3f1]/85 backdrop-blur-md"
+        >
+            <div class="serif tracking-[0.35em] text-lg">SCENTAIRE</div>
+            <div
+                class="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.22em]"
+            >
+                <a
+                    data-nav="home"
+                    class="hover:text-[#7c6408]"
+                    href="collection-ethereal-archive.html"
+                    >Home</a
+                >
+                <a
+                    data-nav="collections"
+                    class="hover:text-[#7c6408]"
+                    href="essence-collection.html"
+                    >Collections</a
+                >
+                <a
+                    data-nav="about"
+                    class="hover:text-[#7c6408]"
+                    href="collection-ethereal-archive.html#about"
+                    >About</a
+                >
+                <a
+                    data-nav="notes"
+                    class="hover:text-[#7c6408]"
+                    href="notes.html"
+                    >Notes</a
+                >
+                <a
+                    data-nav="community"
+                    class="hover:text-[#7c6408]"
+                    href="screen.html"
+                    >Community</a
+                >
+            </div>
+            <div class="text-xs uppercase tracking-[0.2em]">Bag</div>
+        </nav>
+
+        <main class="pt-28 lg:pt-32">
+            <section
+                class="mx-auto flex min-h-[78vh] w-full max-w-7xl flex-col items-center gap-14 px-6 py-14 md:flex-row md:gap-20 md:px-10"
+            >
+                <div class="reveal relative w-full md:w-1/2">
+                    <div class="hero-aura absolute inset-0 -z-10"></div>
+                    <div class="image-wrap">
+                        <img
+                            class="image-zoom h-[560px] w-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnIspD4xaxazBXHhZvUGkn4vq7rpG6G6EiYcsxXbH8w3qRnbLF4gOoZzxoTEJf_7_1h7nn35tpu2AxjNC3QGnn_rTCYhtUDZ93FYdrnkPoOc8EiYLyaYRYFpLgspT1nuN5f1VXs767jPzyPS5AHQDDbY8CJRFdn4DRRraYjoY9JOL-keUoiH-SyG78ntKKLovSpJLKiLRoM9AUjaSAKp-gDmIOpTiLk1EIRAxsooV2elMzNF9pjBsVrDQOR0B1Fhgugk1xyAxfTqM"
+                            alt="Golden Hour fragrance bottle"
+                        />
+                    </div>
+                </div>
+
+                <div class="reveal w-full space-y-8 md:w-1/2">
+                    <p
+                        class="text-[11px] uppercase tracking-[0.3em] text-[#7f7a6f]"
+                    >
+                        Oriental / Warm
+                    </p>
+                    <h1 class="serif text-6xl leading-[0.92] md:text-8xl">
+                        Golden<br />Hour
+                    </h1>
+                    <p class="max-w-xl text-lg leading-relaxed text-[#4f4a41]">
+                        A twilight-born extrait where saffron light melts into
+                        jasmine haze. Its ambered trail lingers with a velvet
+                        warmth that feels both intimate and quietly commanding.
+                    </p>
+                    <p class="serif text-[2rem] italic text-[#7c6408]">
+                        Warm & Sophisticated
+                    </p>
+                </div>
+            </section>
+
+            <section
+                id="composition"
+                class="reveal mx-auto w-full max-w-7xl px-6 py-20 md:px-10"
+            >
+                <div class="section-divider mb-12"></div>
+                <h2 class="serif mb-10 text-center text-4xl md:text-5xl">
+                    The Composition
+                </h2>
+                <div class="grid gap-8 md:grid-cols-3 md:gap-10">
+                    <article class="lux-card p-8 md:p-9">
+                        <p
+                            class="mb-7 text-[11px] uppercase tracking-[0.26em] text-[#7f7a6f]"
+                        >
+                            Top Notes
+                        </p>
+                        <ul class="space-y-5 text-[1.35rem] text-[#6b6457]">
+                            <li class="serif italic font-normal">
+                                Sicilian Bergamot
+                            </li>
+                            <li class="serif italic font-normal">
+                                Neroli Petals
+                            </li>
+                            <li class="serif italic font-normal">
+                                Pink Pepper Mist
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="lux-card p-8 md:p-9">
+                        <p
+                            class="mb-7 text-[11px] uppercase tracking-[0.26em] text-[#7f7a6f]"
+                        >
+                            Middle Notes
+                        </p>
+                        <ul class="space-y-5 text-[1.35rem] text-[#4f4a41]">
+                            <li class="serif italic font-medium">
+                                Night Jasmine
+                            </li>
+                            <li class="serif italic font-medium">
+                                White Peony
+                            </li>
+                            <li class="serif italic font-medium">
+                                Apricot Flesh
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="lux-card p-8 md:p-9">
+                        <p
+                            class="mb-7 text-[11px] uppercase tracking-[0.26em] text-[#7f7a6f]"
+                        >
+                            Base Notes
+                        </p>
+                        <ul class="space-y-5 text-[1.35rem] text-[#1c1b1b]">
+                            <li class="serif italic font-semibold">
+                                Mysore Sandalwood
+                            </li>
+                            <li class="serif italic font-semibold">
+                                Liquid Amber
+                            </li>
+                            <li class="serif italic font-semibold">
+                                Smoked Vanilla Resin
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section
+                class="reveal mx-auto w-full max-w-7xl px-6 py-20 md:px-10"
+            >
+                <div class="section-divider mb-12"></div>
+                <div class="grid gap-8 md:grid-cols-3">
+                    <div class="lux-card p-8">
+                        <p
+                            class="mb-5 text-[11px] uppercase tracking-[0.26em] text-[#7f7a6f]"
+                        >
+                            Longevity
+                        </p>
+                        <div class="h-1.5 w-full bg-[#d8d2c5]">
+                            <div class="h-full w-[86%] bg-[#7c6408]"></div>
+                        </div>
+                        <p class="mt-4 text-sm text-[#6d6658]">
+                            Long lasting, 8 to 10 hours
+                        </p>
+                    </div>
+                    <div class="lux-card p-8">
+                        <p
+                            class="mb-5 text-[11px] uppercase tracking-[0.26em] text-[#7f7a6f]"
+                        >
+                            Sillage
+                        </p>
+                        <div class="h-1.5 w-full bg-[#d8d2c5]">
+                            <div class="h-full w-[72%] bg-[#7c6408]"></div>
+                        </div>
+                        <p class="mt-4 text-sm text-[#6d6658]">
+                            Soft aura with elegant trail
+                        </p>
+                    </div>
+                    <div class="lux-card p-8">
+                        <p
+                            class="mb-5 text-[11px] uppercase tracking-[0.26em] text-[#7f7a6f]"
+                        >
+                            Best For
+                        </p>
+                        <p class="serif text-2xl italic text-[#1c1b1b]">
+                            Day / Night / Formal
+                        </p>
+                        <p class="mt-3 text-sm text-[#6d6658]">
+                            Ideal for evening events and private dinners
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                id="experience"
+                class="reveal mx-auto w-full max-w-4xl px-6 py-20 text-center md:px-10"
+            >
+                <div class="section-divider mb-12"></div>
+                <h2 class="serif mb-6 text-4xl md:text-5xl">The Experience</h2>
+                <p class="text-lg leading-relaxed text-[#4f4a41] md:text-xl">
+                    A refined scent designed for evening elegance, blending
+                    warmth and depth into a lasting impression. The first breath
+                    is luminous and airy, the heart settles into floral warmth,
+                    and the final trail leaves a quiet, confident signature long
+                    after you leave the room.
+                </p>
+            </section>
+
+            <section
+                class="reveal mx-auto w-full max-w-7xl px-6 py-20 md:px-10"
+            >
+                <div class="section-divider mb-12"></div>
+                <h2 class="serif mb-10 text-4xl md:text-5xl">Atmosphere</h2>
+                <div class="grid gap-7 md:grid-cols-3">
+                    <div class="image-wrap">
+                        <img
+                            class="image-zoom h-64 w-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMnN4_rlGd19UejrDq6eRLNNfQnAx2g8xG6Uv9fuUiejC0mR--G6KcPM2PGc1ZkhtZlF-scSLgmM0RjkGD6ZvJUcJ-b5N3lvsOPW02aL6isxCe5RlgQd3546WMb3GFcoTmue2OZurGdLlcXEav-41GcJUs_dK877JlD_jPcEpSq0Vrb1HzpdEnRPolbWnssyRz5-uNDxtyezkygN_o-GvNflyFLBmr_Mk_KSvyrGP-hIybejD-pctlZmQcMZPfdt6FCGDIqvYDrNU"
+                            alt="Perfume in moody smoke"
+                        />
+                    </div>
+                    <div class="image-wrap">
+                        <img
+                            class="image-zoom h-64 w-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLL7HyikwIooYAzPrXZ15CxpXWEf6shR9y0NuraYQHMsEPKyngqus2G7tWSj5x_xMEaDJM-zUWuSny6LSqM4SC-fEPhzKGtxFIdULqZejCmnbu61sxsTVZWSzyVddvFVwR9PsGo5tOS3TIwOqS9fVioWGHj6vjTWVQKPMotZgXpPVaadOMtwPUQE9kZf4ZKzHwkZn0lP347QALaUB1FecG1j2Ryw41UjeRGw_Zu-3PrGSGsi7VbDvatJY0p17lkifpMrIzCyLX8OE"
+                            alt="Fragrance raw ingredients"
+                        />
+                    </div>
+                    <div class="image-wrap">
+                        <img
+                            class="image-zoom h-64 w-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBQjGuhzrjWsLsNQIRFrgy_hGcNHIdtKAK0WRSOA6PxnTIO_-aCTYSxGFR20-fRDunlMdiSzVoF19IuORYz0VFU0pBt5zRSWpll7IM0xkiDEWLqjqqgLg6LGdorJwQdl6q9wR-3ycf6jaaOCLYLyKdAJlVMYQJA9PgtPsDS_yYYkRA_aPW_0EjhsNc-iwRcC5-M5KLTYw34iHpZ3WOBA6XN9sAvAYmIxSChLsM4_LUTYUSIUEYwydxOpUL28bs65KnxZmvCQ9TLek"
+                            alt="Midnight studio mood shot"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section
+                id="recommendation"
+                class="reveal mx-auto w-full max-w-7xl px-6 py-20 md:px-10"
+            >
+                <div class="section-divider mb-12"></div>
+                <div class="mb-10 flex items-end justify-between gap-4">
+                    <h2 class="serif text-4xl md:text-5xl">
+                        You May Also Like
+                    </h2>
+                    <a
+                        class="text-[11px] uppercase tracking-[0.25em] text-[#7c6408]"
+                        href="essence-collection.html"
+                        >View Collection</a
+                    >
+                </div>
+                <div class="grid gap-8 md:grid-cols-3">
+                    <article class="space-y-5">
+                        <div class="image-wrap">
+                            <img
+                                class="image-zoom h-80 w-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMnN4_rlGd19UejrDq6eRLNNfQnAx2g8xG6Uv9fuUiejC0mR--G6KcPM2PGc1ZkhtZlF-scSLgmM0RjkGD6ZvJUcJ-b5N3lvsOPW02aL6isxCe5RlgQd3546WMb3GFcoTmue2OZurGdLlcXEav-41GcJUs_dK877JlD_jPcEpSq0Vrb1HzpdEnRPolbWnssyRz5-uNDxtyezkygN_o-GvNflyFLBmr_Mk_KSvyrGP-hIybejD-pctlZmQcMZPfdt6FCGDIqvYDrNU"
+                                alt="Moonlit Veil perfume"
+                            />
+                        </div>
+                        <div>
+                            <h3 class="serif text-2xl italic">Moonlit Veil</h3>
+                            <p
+                                class="mt-1 text-[11px] uppercase tracking-[0.24em] text-[#7f7a6f]"
+                            >
+                                Powdery / Iris
+                            </p>
+                        </div>
+                    </article>
+                    <article class="space-y-5">
+                        <div class="image-wrap">
+                            <img
+                                class="image-zoom h-80 w-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLL7HyikwIooYAzPrXZ15CxpXWEf6shR9y0NuraYQHMsEPKyngqus2G7tWSj5x_xMEaDJM-zUWuSny6LSqM4SC-fEPhzKGtxFIdULqZejCmnbu61sxsTVZWSzyVddvFVwR9PsGo5tOS3TIwOqS9fVioWGHj6vjTWVQKPMotZgXpPVaadOMtwPUQE9kZf4ZKzHwkZn0lP347QALaUB1FecG1j2Ryw41UjeRGw_Zu-3PrGSGsi7VbDvatJY0p17lkifpMrIzCyLX8OE"
+                                alt="Velvet Ember perfume"
+                            />
+                        </div>
+                        <div>
+                            <h3 class="serif text-2xl italic">Velvet Ember</h3>
+                            <p
+                                class="mt-1 text-[11px] uppercase tracking-[0.24em] text-[#7f7a6f]"
+                            >
+                                Smoky / Spice
+                            </p>
+                        </div>
+                    </article>
+                    <article class="space-y-5">
+                        <div class="image-wrap">
+                            <img
+                                class="image-zoom h-80 w-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBQjGuhzrjWsLsNQIRFrgy_hGcNHIdtKAK0WRSOA6PxnTIO_-aCTYSxGFR20-fRDunlMdiSzVoF19IuORYz0VFU0pBt5zRSWpll7IM0xkiDEWLqjqqgLg6LGdorJwQdl6q9wR-3ycf6jaaOCLYLyKdAJlVMYQJA9PgtPsDS_yYYkRA_aPW_0EjhsNc-iwRcC5-M5KLTYw34iHpZ3WOBA6XN9sAvAYmIxSChLsM4_LUTYUSIUEYwydxOpUL28bs65KnxZmvCQ9TLek"
+                                alt="Morning Dew perfume"
+                            />
+                        </div>
+                        <div>
+                            <h3 class="serif text-2xl italic">Morning Dew</h3>
+                            <p
+                                class="mt-1 text-[11px] uppercase tracking-[0.24em] text-[#7f7a6f]"
+                            >
+                                Fresh / Floral
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer
+            class="border-t border-[#d8d2c5] px-6 py-12 md:px-10 bg-[#ebeef0]"
+        >
+            <div
+                class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 md:flex-row md:items-center"
+            >
+                <p class="serif text-sm tracking-[0.2em]">
+                    THE ETHEREAL ARCHIVE
+                </p>
+                <p
+                    class="text-[10px] uppercase tracking-[0.24em] text-[#6d6658]"
+                >
+                    2026 The Ethereal Archive. All rights reserved.
+                </p>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const path = window.location.pathname.toLowerCase();
+                const activeKey = path.endsWith(
+                    "collection-ethereal-archive.html",
+                )
+                    ? "home"
+                    : path.endsWith("essence-collection.html")
+                      ? "collections"
+                      : "notes";
+                const activeClass =
+                    "text-[#7c6408] border-b border-[#7c6408] pb-1";
+                const inactiveClass = "hover:text-[#7c6408]";
+
+                document
+                    .querySelectorAll("[data-nav]")
+                    .forEach(function (item) {
+                        item.className =
+                            item.getAttribute("data-nav") === activeKey
+                                ? activeClass
+                                : inactiveClass;
+                    });
+
+                document.body.classList.add("page-ready");
+
+                const observer = new IntersectionObserver(
+                    function (entries) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("is-visible");
+                            }
+                        });
+                    },
+                    { threshold: 0.18 },
+                );
+
+                document
+                    .querySelectorAll(".reveal")
+                    .forEach(function (section) {
+                        observer.observe(section);
+                    });
+            });
+        </script>
+    </body>
+</html>

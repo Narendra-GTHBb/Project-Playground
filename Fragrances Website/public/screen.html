@@ -1,0 +1,493 @@
+<!doctype html>
+<html class="light" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SCENTAIRE | Community</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "tertiary-fixed": "#dbe1ff",
+                            "surface-dim": "#f9f9f9",
+                            "on-error": "#690005",
+                            "secondary-fixed": "#f7e1a6",
+                            tertiary: "#27438a",
+                            "on-tertiary-fixed-variant": "#27438a",
+                            "on-secondary-container": "#735c00",
+                            "primary-container": "#d4af37",
+                            "surface-container-highest": "#e1e2e1",
+                            "surface-container-low": "#f4f4f4",
+                            "secondary-fixed-dim": "#dac58d",
+                            surface: "#f9f9f9",
+                            "on-secondary": "#ffffff",
+                            "on-secondary-fixed-variant": "#544519",
+                            "surface-bright": "#ffffff",
+                            "primary-fixed": "#ffe088",
+                            "surface-container-high": "#ebebeb",
+                            "surface-tint": "#d4af37",
+                            "surface-container-lowest": "#ffffff",
+                            error: "#ba1a1a",
+                            "on-tertiary-fixed": "#00174b",
+                            "tertiary-container": "#dbe1ff",
+                            "on-primary-fixed-variant": "#574500",
+                            "tertiary-fixed-dim": "#b4c5ff",
+                            secondary: "#735c00",
+                            "outline-variant": "#c9c6bc",
+                            "on-error-container": "#410002",
+                            "surface-variant": "#e1e2e1",
+                            primary: "#735c00",
+                            "on-surface-variant": "#4d4635",
+                            "inverse-primary": "#e9c349",
+                            outline: "#7d7767",
+                            "surface-container": "#f1f1f1",
+                            background: "#f9f9f9",
+                            "on-surface": "#1c1b1b",
+                            "on-background": "#1c1b1b",
+                            "secondary-container": "#f7e1a6",
+                            "on-secondary-fixed": "#241a00",
+                            "inverse-on-surface": "#f4f0ef",
+                            "on-primary": "#ffffff",
+                            "primary-fixed-dim": "#e9c349",
+                            "on-primary-fixed": "#241a00",
+                            "on-primary-container": "#241a00",
+                            "error-container": "#ffdad6",
+                            "inverse-surface": "#313030",
+                            "on-tertiary": "#ffffff",
+                            "on-tertiary-container": "#00174b",
+                        },
+                        fontFamily: {
+                            headline: ["Playfair Display", "serif"],
+                            display: ["Playfair Display", "serif"],
+                            body: ["Inter", "sans-serif"],
+                            label: ["Inter", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .material-symbols-outlined {
+                font-variation-settings:
+                    "FILL" 0,
+                    "wght" 300,
+                    "GRAD" 0,
+                    "opsz" 24;
+            }
+
+            .mask-gradient {
+                mask-image: linear-gradient(
+                    to bottom,
+                    black 50%,
+                    transparent 100%
+                );
+            }
+        </style>
+    </head>
+    <body
+        class="bg-[#F9F9F9] font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container"
+    >
+        <nav
+            class="fixed top-0 w-full z-50 px-8 lg:px-14 py-4 flex items-center justify-between border-b border-[#e4e1da] bg-[#f3f3f1]/85 backdrop-blur-md"
+        >
+            <div class="serif tracking-[0.35em] text-lg">SCENTAIRE</div>
+            <div
+                class="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.22em]"
+            >
+                <a
+                    data-nav="home"
+                    class="hover:text-[#7c6408]"
+                    href="collection-ethereal-archive.html"
+                    >Home</a
+                >
+                <a
+                    data-nav="collections"
+                    class="hover:text-[#7c6408]"
+                    href="essence-collection.html"
+                    >Collections</a
+                >
+                <a
+                    data-nav="about"
+                    class="hover:text-[#7c6408]"
+                    href="collection-ethereal-archive.html#about"
+                    >About</a
+                >
+                <a
+                    data-nav="notes"
+                    class="hover:text-[#7c6408]"
+                    href="notes.html"
+                    >Notes</a
+                >
+                <a
+                    data-nav="community"
+                    class="text-[#7c6408] border-b border-[#7c6408] pb-1"
+                    href="screen.html"
+                    >Community</a
+                >
+            </div>
+            <div class="flex items-center gap-6">
+                <button
+                    class="text-[#2D3435] hover:text-[#735C00] transition-colors duration-300"
+                    type="button"
+                    aria-label="Shopping bag"
+                >
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </button>
+            </div>
+        </nav>
+
+        <main class="min-h-screen pt-20 md:pt-28">
+            <section
+                class="relative flex h-[614px] items-center justify-center overflow-hidden"
+            >
+                <div
+                    class="absolute inset-0 z-10 bg-gradient-to-b from-[#f9f9f9]/70 via-[#f3f3f1]/40 to-surface-container-lowest/80"
+                ></div>
+                <div
+                    class="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay"
+                    style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDUv9qwA7LsoyPvnoy4acb1kRZ6hqAalu37syd8xcKF0KLjd-xjez35M7Mc1hgavmgGHeiPBB6W-T4DHpGAjVZCB9hxfKaGn0-sMUThXEAQLYTtgqDGIQ67aSRP3HWDCe-01p7hiyfe1PwCr_PRi9r5XpavteQcd-b9d4jZaEvfro-cJQz7OqHiId-uRbiXvnlOLQdVfjs10F43Xm5R5oMG72xJ0g7uINv4ozRbfTi0VnI3Ov9HM1xjuDlk9doHTyrA_fkLJoZFbKo&quot;);
+                    "
+                ></div>
+                <div class="relative z-20 px-6 text-center">
+                    <h1
+                        class="mb-6 font-display text-5xl uppercase leading-none tracking-[0.15em] text-[#1c1b1b] md:text-8xl"
+                    >
+                        COMMUNITY
+                    </h1>
+                    <p
+                        class="mx-auto max-w-2xl font-body text-base font-light uppercase tracking-widest text-on-surface-variant md:text-xl"
+                    >
+                        Discover trusted fragrance creators and reviewers
+                    </p>
+                </div>
+            </section>
+
+            <section class="bg-surface-container-lowest px-6 py-24 md:py-32">
+                <div class="mx-auto max-w-4xl space-y-12 text-center">
+                    <div class="mx-auto h-24 w-px bg-primary/30"></div>
+                    <h2
+                        class="font-display text-3xl italic leading-relaxed text-[#1c1b1b] md:text-4xl"
+                    >
+                        "Perfume is the most intense form of memory. We believe
+                        in the voices that articulate the invisible, those who
+                        translate the language of scent into the poetry of human
+                        connection."
+                    </h2>
+                    <p
+                        class="mx-auto max-w-2xl font-body text-sm uppercase tracking-[0.1em] text-on-surface-variant md:text-base md:leading-loose"
+                    >
+                        A curated collective of olfactory storytellers, bringing
+                        precision, passion, and artistic critique to the world
+                        of Aura Noire.
+                    </p>
+                    <div class="mx-auto h-24 w-px bg-primary/30"></div>
+                </div>
+            </section>
+
+            <section class="bg-surface-container-low py-24 md:py-32">
+                <div class="container mx-auto px-6">
+                    <div class="mb-16 flex items-end justify-between md:mb-24">
+                        <div class="space-y-4">
+                            <h3
+                                class="font-display text-4xl text-[#1c1b1b] md:text-5xl"
+                            >
+                                The Creators
+                            </h3>
+                            <p
+                                class="font-label text-xs uppercase tracking-[0.1em] text-on-surface-variant md:text-sm"
+                            >
+                                Authentic Voices of the Sensory Vault
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-1 gap-x-12 gap-y-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-y-24"
+                    >
+                        <article
+                            class="group flex cursor-pointer flex-col items-center text-center transition-all duration-500 hover:-translate-y-2"
+                        >
+                            <div class="relative mb-8">
+                                <div
+                                    class="absolute inset-0 rounded-full border-2 border-transparent transition-all duration-500 group-hover:scale-110 group-hover:border-primary/50"
+                                ></div>
+                                <div
+                                    class="h-40 w-40 overflow-hidden rounded-full border border-outline-variant/30 md:h-48 md:w-48"
+                                >
+                                    <img
+                                        alt="Julian Moss"
+                                        class="h-full w-full object-cover grayscale transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCswj6EH02ZCW84IVFQkKCyuLQTjDTzHybkqCkRC5pZiATMFyH_rkXYLU68Lej4zZvOmen-vrBcvbP0pPWPM402cUp8clH4g6bZOWZHcEDrW0aL3FueA8tsa2sgAfTRV1otAk9QDrmo9FyaCWzTDvMYGWZp7tOP2nNOxHLl9nM8n51JmXpmGHAv-xsdfPuB2nUbnTHyi4sN43y1v-OFotF7yuKtX7_NBGGUI2xTnfckhkib60C_WezEgdv78cLimR5veV2XQY8ONzA"
+                                    />
+                                </div>
+                            </div>
+                            <span
+                                class="mb-2 font-label text-[10px] uppercase tracking-[0.2em] text-primary"
+                                >TikTok</span
+                            >
+                            <h4
+                                class="font-display text-2xl text-[#1c1b1b] transition-colors duration-300 group-hover:text-primary"
+                            >
+                                Julian Moss
+                            </h4>
+                            <p
+                                class="mb-8 mt-4 line-clamp-2 px-4 font-body text-sm font-light leading-relaxed text-on-surface-variant"
+                            >
+                                Master of layering and seasonal scent
+                                aesthetics. Julian explores the depth of woody
+                                notes.
+                            </p>
+                            <a
+                                class="flex items-center gap-2 font-label text-xs uppercase tracking-[0.15em] text-on-surface-variant transition-colors hover:text-[#7c6408]"
+                                href="#"
+                            >
+                                Visit Profile
+                                <span
+                                    class="material-symbols-outlined text-base"
+                                    >open_in_new</span
+                                >
+                            </a>
+                        </article>
+
+                        <article
+                            class="group flex cursor-pointer flex-col items-center text-center transition-all duration-500 hover:-translate-y-2"
+                        >
+                            <div class="relative mb-8">
+                                <div
+                                    class="absolute inset-0 rounded-full border-2 border-transparent transition-all duration-500 group-hover:scale-110 group-hover:border-primary/50"
+                                ></div>
+                                <div
+                                    class="h-40 w-40 overflow-hidden rounded-full border border-outline-variant/30 md:h-48 md:w-48"
+                                >
+                                    <img
+                                        alt="Aria Thorne"
+                                        class="h-full w-full object-cover grayscale transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4x-AIvUuS8MFk8RqiV4TtiFQnt2popJ0FWZgqh3iKadti4o_vdtFWA2Dua05QhwUtDMaA-lWpTlTf6b4nUdxECQdBaLmg-Y8bBy9yQUpbMPJJFtNpmvG8rGd1vOPowgJez5_4qM4SM1WrvDoydceBmjXBQJT3sCCB4MJvAT0u5OB0yqKu1IZanpzLZADWHdYtShT_q-Q7ByU6b-qiEJY_-b7nLgRCuMJn7Mro6-ZTVTGX20b-gKp2uWc72473QN_BVGhulTfYfBU"
+                                    />
+                                </div>
+                            </div>
+                            <span
+                                class="mb-2 font-label text-[10px] uppercase tracking-[0.2em] text-primary"
+                                >Instagram</span
+                            >
+                            <h4
+                                class="font-display text-2xl text-[#1c1b1b] transition-colors duration-300 group-hover:text-primary"
+                            >
+                                Aria Thorne
+                            </h4>
+                            <p
+                                class="mb-8 mt-4 line-clamp-2 px-4 font-body text-sm font-light leading-relaxed text-on-surface-variant"
+                            >
+                                Olfactory poet focusing on the romanticism of
+                                incense and dark rose.
+                            </p>
+                            <a
+                                class="flex items-center gap-2 font-label text-xs uppercase tracking-[0.15em] text-on-surface-variant transition-colors hover:text-[#7c6408]"
+                                href="#"
+                            >
+                                Visit Profile
+                                <span
+                                    class="material-symbols-outlined text-base"
+                                    >open_in_new</span
+                                >
+                            </a>
+                        </article>
+
+                        <article
+                            class="group flex cursor-pointer flex-col items-center text-center transition-all duration-500 hover:-translate-y-2"
+                        >
+                            <div class="relative mb-8">
+                                <div
+                                    class="absolute inset-0 rounded-full border-2 border-transparent transition-all duration-500 group-hover:scale-110 group-hover:border-primary/50"
+                                ></div>
+                                <div
+                                    class="h-40 w-40 overflow-hidden rounded-full border border-outline-variant/30 md:h-48 md:w-48"
+                                >
+                                    <img
+                                        alt="Silas Noir"
+                                        class="h-full w-full object-cover grayscale transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnSQD4k-qIC5JVlIkbfKoA9jQIzlk-EwmdNbvHGMHZbjzkw9rouRnKlnMFixaEq3hyvHnTFG1__z0alg2BitmyXvG7t71rjvnmTpiW9v_nV9TUxK5xXon3LaaVKbtpNEctKeER4bh2oavSyyJI3OTuiv3GKMF1jBTFg9b3kr-iDtAPJsvDmpckmCorDPfRKyFkM3AkJxvyfbbrHeiW9q9V44YfBeG367NZYLdZY1z1Zc-r4WbUXKFjDovjtI2Q7LgLtKed9uyh--w"
+                                    />
+                                </div>
+                            </div>
+                            <span
+                                class="mb-2 font-label text-[10px] uppercase tracking-[0.2em] text-primary"
+                                >TikTok</span
+                            >
+                            <h4
+                                class="font-display text-2xl text-[#1c1b1b] transition-colors duration-300 group-hover:text-primary"
+                            >
+                                Silas Noir
+                            </h4>
+                            <p
+                                class="mb-8 mt-4 line-clamp-2 px-4 font-body text-sm font-light leading-relaxed text-on-surface-variant"
+                            >
+                                The architect of scent. Silas breaks down
+                                fragrances into their elemental structures.
+                            </p>
+                            <a
+                                class="flex items-center gap-2 font-label text-xs uppercase tracking-[0.15em] text-on-surface-variant transition-colors hover:text-[#7c6408]"
+                                href="#"
+                            >
+                                Visit Profile
+                                <span
+                                    class="material-symbols-outlined text-base"
+                                    >open_in_new</span
+                                >
+                            </a>
+                        </article>
+
+                        <article
+                            class="group flex cursor-pointer flex-col items-center text-center transition-all duration-500 hover:-translate-y-2"
+                        >
+                            <div class="relative mb-8">
+                                <div
+                                    class="absolute inset-0 rounded-full border-2 border-transparent transition-all duration-500 group-hover:scale-110 group-hover:border-primary/50"
+                                ></div>
+                                <div
+                                    class="h-40 w-40 overflow-hidden rounded-full border border-outline-variant/30 md:h-48 md:w-48"
+                                >
+                                    <img
+                                        alt="Elena Frey"
+                                        class="h-full w-full object-cover grayscale transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNMc6upT2Unmug9yCalBNdvR90aqUQzkTFNrMPy-1lY2nwkZxa5Tlo2Nev47AF6rfEv1ihvSCc2SCnhveepR8cWGrDSuPRUSl5-JO4VHYxfbu45d87-fr7dt_mjoKLu6zECV1RvWbU7HHH0GqTj07Ls0mfCmZoASNFPW65QQf5gGburiY8Mas0rVLaF_DMRNYe1Gi7o1CtsgQSv7lcai_wuT-9Cb5VZui-TacRmhF0FNu5BKpaexVlquU8Xae7gxBSepHizA9WFRw"
+                                    />
+                                </div>
+                            </div>
+                            <span
+                                class="mb-2 font-label text-[10px] uppercase tracking-[0.2em] text-primary"
+                                >YouTube</span
+                            >
+                            <h4
+                                class="font-display text-2xl text-[#1c1b1b] transition-colors duration-300 group-hover:text-primary"
+                            >
+                                Elena Frey
+                            </h4>
+                            <p
+                                class="mb-8 mt-4 line-clamp-2 px-4 font-body text-sm font-light leading-relaxed text-on-surface-variant"
+                            >
+                                Cinematic storyteller documenting the evocative
+                                power of musk and amber.
+                            </p>
+                            <a
+                                class="flex items-center gap-2 font-label text-xs uppercase tracking-[0.15em] text-on-surface-variant transition-colors hover:text-[#7c6408]"
+                                href="#"
+                            >
+                                Visit Profile
+                                <span
+                                    class="material-symbols-outlined text-base"
+                                    >open_in_new</span
+                                >
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="relative overflow-hidden bg-surface-container-lowest py-28 md:py-40"
+            >
+                <div
+                    class="mask-gradient absolute right-0 top-0 h-full w-1/2 bg-cover bg-center opacity-10"
+                    style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBJQTxfCXWeEWXG2Rb3IQpKEyNxvbc9TupRQFW8ejDnstpvzzq6WLLnfWyNijLHfMVLW4Q7Cgl5KxdM5wa1NZ6eo7jO_sJT6ktjkkowsxxF72jPhTfCA6TE5OoHDWHNhX4o1q91n-iUTAhzuG7zCpJ3GM7BinzG4p6QuoaEzmMXx7Fm9xMGQ8b9r59jj_QAdnIsZhHU0KNRl0fd6YuLKy73bqgAlKz_2Voqb49YJhVEVAX-hjWWoKayaZSw5GOOHuzsIUHS78R5R-o&quot;);
+                    "
+                ></div>
+                <div class="container relative z-10 mx-auto px-6 text-center">
+                    <h3
+                        class="mb-8 font-display text-5xl text-[#1c1b1b] md:text-6xl"
+                    >
+                        SHARE THE VOID
+                    </h3>
+                    <p
+                        class="mx-auto mb-16 max-w-xl font-body text-base uppercase leading-relaxed tracking-[0.2em] text-on-surface-variant md:text-lg"
+                    >
+                        Tag your experiences with #AURANOIRE for a chance to be
+                        featured in our curated community journal.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-8">
+                        <div class="flex flex-col items-center">
+                            <span
+                                class="mb-2 font-display text-3xl text-primary md:text-4xl"
+                                >12K+</span
+                            >
+                            <span
+                                class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant"
+                                >Storytellers</span
+                            >
+                        </div>
+                        <div
+                            class="mx-1 hidden h-12 w-px bg-outline-variant sm:block"
+                        ></div>
+                        <div class="flex flex-col items-center">
+                            <span
+                                class="mb-2 font-display text-3xl text-primary md:text-4xl"
+                                >450+</span
+                            >
+                            <span
+                                class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant"
+                                >Creations</span
+                            >
+                        </div>
+                        <div
+                            class="mx-1 hidden h-12 w-px bg-outline-variant sm:block"
+                        ></div>
+                        <div class="flex flex-col items-center">
+                            <span
+                                class="mb-2 font-display text-3xl text-primary md:text-4xl"
+                                >85</span
+                            >
+                            <span
+                                class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant"
+                                >Countries</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer
+            class="flex w-full flex-col items-center justify-between gap-8 border-t border-[#d8d2c5] bg-[#f3f3f1] px-6 py-10 font-['Inter'] text-[10px] uppercase tracking-[0.15em] text-[#1c1b1b] md:flex-row md:px-12 md:py-16"
+        >
+            <a
+                class="font-['Noto_Serif'] text-lg tracking-[0.2em] text-[#1c1b1b] md:text-xl"
+                href="index.html"
+                >SCENTAIRE</a
+            >
+            <div class="flex flex-wrap justify-center gap-8 md:gap-12">
+                <a
+                    class="text-[#6d6658] transition-colors duration-300 hover:text-[#7c6408]"
+                    href="#"
+                    >Privacy</a
+                >
+                <a
+                    class="text-[#6d6658] transition-colors duration-300 hover:text-[#7c6408]"
+                    href="#"
+                    >Terms</a
+                >
+                <a
+                    class="text-[#6d6658] transition-colors duration-300 hover:text-[#7c6408]"
+                    href="#"
+                    >Sustainability</a
+                >
+                <a
+                    class="text-[#6d6658] transition-colors duration-300 hover:text-[#7c6408]"
+                    href="#"
+                    >Press</a
+                >
+            </div>
+            <div class="text-[#6d6658]">
+                &copy; 2024 Scentaire. All rights reserved.
+            </div>
+        </footer>
+    </body>
+</html>

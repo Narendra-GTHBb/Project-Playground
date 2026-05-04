@@ -1,0 +1,382 @@
+﻿<!doctype html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCENTAIRE | The Essence Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="theme.css" />
+    <style>
+      /* Page-specific styles are intentionally minimal; shared tokens live in theme.css. */
+    </style>
+  </head>
+  <body class="luxe-body page-fade">
+    <nav
+      class="fixed top-0 w-full z-50 px-8 lg:px-14 py-4 flex items-center justify-between border-b border-[#e4e1da] bg-[#f3f3f1]/85 backdrop-blur-md"
+    >
+      <div class="serif tracking-[0.35em] text-lg">SCENTAIRE</div>
+      <div
+        class="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.22em]"
+      >
+        <a
+          data-nav="home"
+          href="collection-ethereal-archive.html"
+          class="hover:text-[#7c6408]"
+          >Home</a
+        >
+        <a
+          data-nav="collections"
+          href="essence-collection.html"
+          class="text-[#7c6408] border-b border-[#7c6408] pb-1"
+          >Collections</a
+        >
+        <a
+          data-nav="about"
+          href="collection-ethereal-archive.html#about"
+          class="hover:text-[#7c6408]"
+          >About</a
+        >
+        <a data-nav="notes" href="notes.html" class="hover:text-[#7c6408]"
+          >Notes</a
+        >
+        <a data-nav="community" href="screen.html" class="hover:text-[#7c6408]"
+          >Community</a
+        >
+      </div>
+      <div class="text-xs uppercase tracking-[0.2em]">Bag</div>
+    </nav>
+
+    <main
+      class="max-w-[1320px] mx-auto px-8 lg:px-14 py-14 lg:py-16 pt-28 lg:pt-32"
+    >
+      <header class="mb-14 lg:mb-16">
+        <h1 class="serif text-6xl lg:text-8xl font-light leading-[1.05] mb-6">
+          The Essence Collection
+        </h1>
+        <p class="max-w-2xl text-[#585246] text-xl leading-9 italic">
+          A curated selection of olfactory journeys, captured in obsidian glass.
+          Designed for those who appreciate the silence between notes.
+        </p>
+      </header>
+
+      <div class="mb-10 flex flex-col md:flex-row md:items-end gap-5 md:gap-8">
+        <label class="text-[10px] uppercase tracking-[0.28em] text-[#7f7a6f]">
+          Brand
+          <select
+            id="brand-filter"
+            class="block mt-2 min-w-[220px] bg-transparent border border-[#d8d2c5] px-3 py-2 text-sm tracking-normal"
+          >
+            <option value="all">All Brands</option>
+          </select>
+        </label>
+        <label class="text-[10px] uppercase tracking-[0.28em] text-[#7f7a6f]">
+          Sort
+          <select
+            id="sort-filter"
+            class="block mt-2 min-w-[220px] bg-transparent border border-[#d8d2c5] px-3 py-2 text-sm tracking-normal"
+          >
+            <option value="newest">Newest</option>
+            <option value="name-asc">Name: A-Z</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </label>
+        <label class="text-[10px] uppercase tracking-[0.28em] text-[#7f7a6f]">
+          Search
+          <input
+            id="search-filter"
+            type="text"
+            placeholder="name, category, brand"
+            class="block mt-2 min-w-[260px] bg-transparent border border-[#d8d2c5] px-3 py-2 text-sm tracking-normal lowercase"
+          />
+        </label>
+        <button
+          id="reset-filters"
+          type="button"
+          class="h-[42px] px-4 border border-[#d8d2c5] text-[10px] uppercase tracking-[0.22em] text-[#6d6658] hover:text-[#7c6408] hover:border-[#7c6408] transition-colors"
+        >
+          Reset Filters
+        </button>
+        <p id="result-label" class="text-[11px] italic text-[#6d6658]"></p>
+      </div>
+      <p class="-mt-6 mb-8 text-[11px] text-[#7a7468] italic">
+        Shortcuts: press / to focus search, press Esc to reset filters.
+      </p>
+
+      <section id="product-grid" class="grid gap-7 md:grid-cols-5"></section>
+
+      <div class="pt-16 pb-8 text-center">
+        <button
+          id="load-more-btn"
+          class="gold-bg text-white px-10 py-4 text-[11px] tracking-[0.22em] uppercase"
+        >
+          Reveal More
+        </button>
+        <p id="viewing-label" class="mt-5 text-[11px] italic text-[#6d6658]">
+          Viewing 6 of 24 curated scents
+        </p>
+      </div>
+    </main>
+
+    <footer class="bg-[#dfe2e4] px-8 lg:px-14 py-16 text-[#424242]">
+      <div
+        class="max-w-[1320px] mx-auto flex flex-col md:flex-row justify-between gap-10 text-[11px] tracking-[0.18em] uppercase"
+      >
+        <div>
+          <div class="serif text-base tracking-[0.24em] mb-4 normal-case">
+            SCENTAIRE
+          </div>
+          <p class="text-[#5f5f5f]">Â© 2024 SCENTAIRE. All rights reserved.</p>
+        </div>
+        <div class="flex gap-8">
+          <a href="#">Sustainability</a><a href="#">Shipping</a
+          ><a href="#">Returns</a><a href="#">Contact</a><a href="#">Privacy</a>
+        </div>
+      </div>
+    </footer>
+    <script src="products.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const path = window.location.pathname.toLowerCase();
+        const activeKey = path.endsWith("collection-ethereal-archive.html")
+          ? "home"
+          : "collections";
+        const activeClass = "text-[#7c6408] border-b border-[#7c6408] pb-1";
+        const inactiveClass = "hover:text-[#7c6408]";
+
+        document.querySelectorAll("[data-nav]").forEach(function (item) {
+          item.className =
+            item.getAttribute("data-nav") === activeKey
+              ? activeClass
+              : inactiveClass;
+        });
+
+        document.body.classList.add("page-ready");
+
+        const products = (window.FRAGRANCE_PRODUCTS || []).filter(
+          (product) => product.collection === "The Essence Collection",
+        );
+        const brandFilter = document.getElementById("brand-filter");
+        const sortFilter = document.getElementById("sort-filter");
+        const searchFilter = document.getElementById("search-filter");
+        const resetFilters = document.getElementById("reset-filters");
+        const productGrid = document.getElementById("product-grid");
+        const resultLabel = document.getElementById("result-label");
+        const loadMoreBtn = document.getElementById("load-more-btn");
+        const viewingLabel = document.getElementById("viewing-label");
+        const pageSize = 6;
+        const stepSize = 3;
+        let visibleCount = pageSize;
+        const params = new URLSearchParams(window.location.search);
+
+        const brands = Array.from(
+          new Set(products.map((product) => product.brand)),
+        ).sort();
+        brands.forEach((brand) => {
+          const option = document.createElement("option");
+          option.value = brand;
+          option.textContent = brand;
+          brandFilter.appendChild(option);
+        });
+
+        function hydrateFromUrl() {
+          const brandFromUrl = params.get("brand") || "all";
+          const sortFromUrl = params.get("sort") || "newest";
+          const queryFromUrl = params.get("q") || "";
+          const countFromUrl = Number(params.get("count") || pageSize);
+
+          const isValidBrand =
+            brandFromUrl === "all" || brands.includes(brandFromUrl);
+          const isValidSort = [
+            "newest",
+            "name-asc",
+            "price-asc",
+            "price-desc",
+          ].includes(sortFromUrl);
+
+          brandFilter.value = isValidBrand ? brandFromUrl : "all";
+          sortFilter.value = isValidSort ? sortFromUrl : "newest";
+          searchFilter.value = queryFromUrl;
+          visibleCount =
+            Number.isFinite(countFromUrl) && countFromUrl > 0
+              ? countFromUrl
+              : pageSize;
+        }
+
+        function syncUrlState() {
+          const current = new URLSearchParams();
+          if (brandFilter.value && brandFilter.value !== "all") {
+            current.set("brand", brandFilter.value);
+          }
+          if (sortFilter.value && sortFilter.value !== "newest") {
+            current.set("sort", sortFilter.value);
+          }
+          if (searchFilter.value.trim()) {
+            current.set("q", searchFilter.value.trim());
+          }
+          if (visibleCount > pageSize) {
+            current.set("count", String(visibleCount));
+          }
+          const queryString = current.toString();
+          const nextUrl = queryString
+            ? `${window.location.pathname}?${queryString}`
+            : window.location.pathname;
+          window.history.replaceState({}, "", nextUrl);
+        }
+
+        function currency(value) {
+          return "$" + Number(value).toFixed(0);
+        }
+
+        function sortProducts(list, sortKey) {
+          const cloned = [...list];
+          if (sortKey === "name-asc") {
+            return cloned.sort((a, b) => a.name.localeCompare(b.name));
+          }
+          if (sortKey === "price-asc") {
+            return cloned.sort((a, b) => Number(a.price) - Number(b.price));
+          }
+          if (sortKey === "price-desc") {
+            return cloned.sort((a, b) => Number(b.price) - Number(a.price));
+          }
+          return cloned;
+        }
+
+        function getFilteredProducts() {
+          const activeBrand = brandFilter.value;
+          const query = searchFilter.value;
+          const sortKey = sortFilter.value;
+
+          const brandVisible =
+            activeBrand !== "all"
+              ? products.filter((product) => product.brand === activeBrand)
+              : products;
+
+          const normalizedQuery = (query || "").trim().toLowerCase();
+          const searched = !normalizedQuery
+            ? brandVisible
+            : brandVisible.filter((product) => {
+                const textBlob =
+                  `${product.name} ${product.brand} ${product.category} ${product.description}`.toLowerCase();
+                return textBlob.includes(normalizedQuery);
+              });
+
+          return sortProducts(searched, sortKey);
+        }
+
+        function renderGrid() {
+          const filtered = getFilteredProducts();
+          const visible = filtered.slice(0, visibleCount);
+
+          if (filtered.length === 0) {
+            productGrid.innerHTML =
+              '<div class="col-span-full text-center py-14 text-[#6d6658] italic">No fragrances match your filter.</div>';
+          } else {
+            productGrid.innerHTML = visible
+              .map(
+                (product) => `
+                  <article class="group luxe-card p-3">
+                    <img class="card-img" src="${product.image}" alt="${product.name}" />
+                    <p class="mt-6 text-[10px] tracking-[0.28em] uppercase text-[#7f7a6f]">${product.category}</p>
+                    <h2 class="serif text-2xl md:text-3xl mt-1 mb-3 leading-tight">${product.name}</h2>
+                    <p class="text-[#5d574d] mb-5">${product.description}</p>
+                    <div class="flex justify-between items-center text-sm">
+                      <span class="gold" style="color:${product.accentColor || "#7c6408"}">${currency(product.price)}</span>
+                      <a class="discover-link uppercase tracking-[0.2em] text-[10px] border-b" style="border-color:${product.accentColor || "#b4aea2"}; color:${product.accentColor || "#7c6408"}" href="silk-ash.html?product=${encodeURIComponent(product.slug)}">Discover</a>
+                    </div>
+                  </article>
+                `,
+              )
+              .join("");
+          }
+
+          resultLabel.textContent = `Showing ${filtered.length} matching scents`;
+          viewingLabel.textContent = `Viewing ${Math.min(visible.length, filtered.length)} of ${filtered.length} curated scents`;
+          loadMoreBtn.style.display =
+            visible.length < filtered.length ? "inline-block" : "none";
+          syncUrlState();
+        }
+
+        function resetAllFilters() {
+          brandFilter.value = "all";
+          sortFilter.value = "newest";
+          searchFilter.value = "";
+          visibleCount = pageSize;
+          renderGrid();
+        }
+
+        brandFilter.addEventListener("change", function () {
+          visibleCount = pageSize;
+          renderGrid();
+        });
+
+        sortFilter.addEventListener("change", function () {
+          visibleCount = pageSize;
+          renderGrid();
+        });
+
+        searchFilter.addEventListener("input", function () {
+          visibleCount = pageSize;
+          renderGrid();
+        });
+
+        loadMoreBtn.addEventListener("click", function () {
+          visibleCount += stepSize;
+          renderGrid();
+        });
+
+        resetFilters.addEventListener("click", function () {
+          resetAllFilters();
+        });
+
+        document.addEventListener("keydown", function (event) {
+          const target = event.target;
+          const tag =
+            target && target.tagName ? target.tagName.toLowerCase() : "";
+          const isTypingContext =
+            tag === "input" ||
+            tag === "textarea" ||
+            tag === "select" ||
+            (target && target.isContentEditable);
+
+          if (event.key === "/" && !isTypingContext) {
+            event.preventDefault();
+            searchFilter.focus();
+            searchFilter.select();
+          }
+
+          if (event.key === "Escape") {
+            event.preventDefault();
+            resetAllFilters();
+            if (
+              document.activeElement &&
+              typeof document.activeElement.blur === "function"
+            ) {
+              document.activeElement.blur();
+            }
+          }
+        });
+
+        hydrateFromUrl();
+        renderGrid();
+      });
+      document.querySelectorAll('a[href*=".html"]').forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          const href = link.getAttribute("href");
+          if (!href) return;
+          e.preventDefault();
+          document.body.classList.remove("page-ready");
+          setTimeout(function () {
+            window.location.href = href;
+          }, 180);
+        });
+      });
+    </script>
+  </body>
+</html>

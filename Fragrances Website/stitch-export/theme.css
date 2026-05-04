@@ -1,0 +1,84 @@
+:root {
+  --luxe-gold: #7c6408;
+  --luxe-gold-soft: #d4af37;
+  --luxe-bg: #f3f3f1;
+  --luxe-text: #181818;
+  --luxe-muted: #5d574d;
+  --luxe-border: #d8d2c5;
+  --luxe-shadow: 0 14px 30px rgba(24, 24, 24, 0.08);
+}
+
+.luxe-body {
+  font-family: Inter, sans-serif;
+  background: var(--luxe-bg);
+  color: var(--luxe-text);
+}
+
+.page-fade {
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.page-fade.page-ready {
+  opacity: 1;
+}
+
+.serif {
+  font-family: "Noto Serif", serif;
+}
+
+.gold {
+  color: var(--luxe-gold);
+}
+
+.gold-bg {
+  background: var(--luxe-gold);
+}
+
+.line {
+  border-color: #d7d2c8;
+}
+
+.card-img {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  object-fit: cover;
+  background: #e8e8e4;
+}
+
+.luxe-card {
+  transition:
+    transform 280ms ease,
+    box-shadow 280ms ease,
+    border-color 280ms ease;
+  border: 1px solid transparent;
+}
+
+.luxe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--luxe-shadow);
+  border-color: var(--luxe-border);
+}
+
+.discover-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.discover-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background: var(--luxe-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 240ms ease;
+}
+
+.discover-link:hover::after {
+  transform: scaleX(1);
+}
